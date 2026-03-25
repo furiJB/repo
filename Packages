@@ -1,3 +1,42 @@
+Package: com.aoi.storefix
+Version: 1.0-7
+Architecture: iphoneos-arm
+Maintainer: satou@aoiblog.jp
+Depends: firmware  (<= 6.1.6) ,net.nekokawa.appstorefix ,uk.invoxiplaygames.checkmatestore ,com.innoying.sbutils
+Conflicts: com.aoi.storefix
+Filename: ./debs/te.deb
+Size: 1512
+MD5sum: c3182d4dc9df2c63fe4ec44c6a9949b5
+SHA1: 123cbd1cb54b56e4032f45b30543a0a4156951dd
+SHA256: da5aaca8b0ca06ded50cc6fc975304972fc93a4efb309ba8e33da69ad4e73866
+Section: System
+Description: Fixed an issue where iOS 6 and earlier could not connect to the App Store. (Only the host file is rewritten. A restart may be required after installation.) If you applied the patch in the previous version, you may not be able to log in with your Apple ID, so we recommend initializing it.
+Tag: purpose::extension
+Author: satou@aoiblog.jp
+Depiction: http://aoiblog.jp/appstorefix_history2.html
+Dev: aoi_satou
+Name: AppStoreFix
+
+Package: com.exile90.icleanerpro
+Version: 7.10.0
+Architecture: iphoneos-arm
+Maintainer: Ivano Bilenchi <support@ib-soft.net>
+Depends: firmware (>= 4.0), findutils, apt | apt7
+Conflicts: org.altervista.exilecom.icleaner
+Replaces: org.altervista.exilecom.icleaner
+Filename: ./debs/com.exile90.icleanerpro_7.10.0_iphoneos-arm.deb
+Size: 2450460
+MD5sum: 830ebd462d173a9211f5f7c41ce64d1a
+SHA1: 437f5c5097cdab433698b11dab81c3cb8fc82917
+SHA256: 99c90c0f4629d47af1c52772f374eb74828f7cdafc469fcc42af0eea6d417c66
+Section: Utilities
+Homepage: http://ib-soft.net/icleaner
+Description: The first real iOS system cleanup and management utility
+Author: Ivano Bilenchi <support@ib-soft.net>
+Depiction: http://ib-soft.net/depictions/?pkgId=com.exile90.icleanerpro
+Icon: file:///Applications/iCleaner.app/Icon.png
+Name: iCleaner Pro
+
 Package: com.skyglow.itunesstorex
 Version: 3.2
 Architecture: iphoneos-arm
@@ -88,4 +127,37 @@ Description: Enables the ability to install unsigned/fakesigned iOS applications
 Author: Linus Yang, Karen/あけみ <karen@akemi.ai>
 Depiction: https://cydia.akemi.ai/?page/net.angelxwind.appsyncunified
 Name: AppSync Unified
+
+Package: net.nekokawa.appstorefix
+Version: 0.3.5-4+debug
+Architecture: iphoneos-arm
+Maintainer: nekokawa
+Installed-Size: 264
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 6.0), firmware (<= 6.1.6), preferenceloader
+Filename: ./debs/net.nekokawa.appstorefix_0.3.5-4+debug_iphoneos-arm.deb
+Size: 22434
+MD5sum: 435aade5d4f33a26ae32ef1af8310090
+SHA1: 1e602811b5f60d8211ae0bc448958b672c89b7bd
+SHA256: d74c697d0f9bd6f7a1e0f5b4c147e83d340f2d07b2c5ce797ae875cbe6c8beaf
+Section: Tweaks
+Description: Fix AppStore SSL connection(only iOS 6!)
+Author: nekokawa
+Name: StoreSSLFix
+
+Package: uk.invoxiplaygames.checkmatestore
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Installed-Size: 164
+Depends: mobilesubstrate, firmware (>= 2.0)
+Filename: ./debs/checkmatestore-1.2.deb
+Size: 5200
+MD5sum: 5245fc6431aadd77110a226b8f0d9ee8
+SHA1: 1330e7a5c051c6dfbff558184de78accecb19032
+SHA256: 0863fee434c9a1aed89696655b4075aa3edde2b2ad3ee2a0e99a99428c17ffe3
+Section: Tweaks
+Description: Disable capability limits in the App Store.
+Author: InvoxiPlayGames <webmaster@invoxiplaygames.uk>
+Depiction: http://cydia.invoxiplaygames.uk/dp/checkmatestore.php
+Name: Checkmate, Store!
 
