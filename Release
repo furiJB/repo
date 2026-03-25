@@ -1,9 +1,9 @@
-Origin: furiJB Repo
-Label: furiJB
+Origin: Furimori's Repo
+Label: Furimori's Repo
 Suite: stable
 Version: 1.0
-Codename: furijb
+Codename: furimori
 Architectures: iphoneos-arm
 Components: main
-Description: furiJB's personal jailbreak repository
+Description: Furimori's personal jailbreak repository
 Icon: https://furiJB.github.io/repo/CydiaIcon.png
