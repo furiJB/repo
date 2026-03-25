@@ -1,0 +1,38 @@
+name: Generate Repo Packages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'debs/**'
+      - 'Release'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev bzip2 xz-utils zstd
+
+      - name: Generate Packages
+        run: |
+          dpkg-scanpackages -m ./debs /dev/null > Packages
+          bzip2 -c9 Packages > Packages.bz2
+          xz -c9 Packages > Packages.xz
+          zstd -c19 Packages > Packages.zst
+
+      - name: Commit Packages
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Packages Packages.bz2 Packages.xz Packages.zst
+          git commit -m "Update repository packages [skip ci]" || echo "No changes to commit"
+          git push
